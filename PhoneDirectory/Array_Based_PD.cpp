@@ -77,7 +77,7 @@ string Phone_Directory::add_or_change_entry(const string& name,
 	*/
 string Phone_Directory::lookup_entry(const string& name) const
 {
-	int index = find(name);
+	int index = find(name); //both did this part together
 	if (index != -1) {
 		return the_directory[index].get_number();
 	}
@@ -117,8 +117,12 @@ string Phone_Directory::remove_entry(const string& name) // Exercise 1.7: please
 {
 
 	// Hint: you can use the code below to shift names down in the directory to remove the selected entry specified by "index"
-	// for (int i = index; i < size - 1; i++)
-		// the_directory[i] = the_directory[i + 1];
+	int index = find(name);
+	if (index != -1)
+	{
+		string s = the_directory[index].get_number();
+	 for (int i = index; i < size - 1; i++)
+	the_directory[i] = the_directory[i + 1];
 
 	return "";
 }
