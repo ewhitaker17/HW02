@@ -53,7 +53,7 @@ public:
 	void save();
 
 private:
-	class Directory_Entry
+	class Directory_Entry /* Exercise 1.6: Please complete the definition of the Directory_Entry class here. - Ed/Kent */
 	{
 	public:
 		Directory_Entry() {} // Default no-argument constructor 
@@ -62,6 +62,7 @@ private:
 		}
 		std::string get_name() const {
 			return ""; // method not implemented yet
+
 		}
 		std::string get_number() const {
 			return ""; // method not implemented yet
@@ -69,10 +70,10 @@ private:
 		void set_number(const std::string& new_number) {
 			// method not implemented yet
 		}
+
 	private:
 
 	};
-
 
 	// Private Functions
 	/** Searches the array of directory entries for the name.

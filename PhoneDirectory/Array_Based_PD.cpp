@@ -121,11 +121,14 @@ string Phone_Directory::remove_entry(const string& name) // Exercise 1.7: please
 	if (index != -1)
 	{
 		string s = the_directory[index].get_number();
-	 for (int i = index; i < size - 1; i++)
-	the_directory[i] = the_directory[i + 1];
 
+		for (int i = index; i < size - 1; i++)
+			the_directory[i] = the_directory[i + 1];
+		return s;
+	}
+	else
 	return "";
-}
+
 
 // Private method implementation
 
